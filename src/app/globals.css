@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
+    --font-geist-sans: "Geist Sans", sans-serif;
+    --font-geist-mono: "Geist Mono", monospace;
+
+}
+
+@theme {
+    --color-lamaSky: #C3EBFA;
+    --color-lamaSkyLight: #EDF9FD;
+    --color-lamaPurple: #CFCEFF;
+    --color-lamaPurpleLight: #F1F0FF;
+    --color-lamaYellow: #FAE27C;
+    --color-lamaYellowLight: #FEFCE8;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.react-calendar {
+    width: 100% !important;
+    max-width: 100%;
+    background: var(--color-background);
+    border: none !important;
+}
+
+.react-calendar__tile--active {
+    background: var(--color-lamaSky) !important;
+}
+
+.react-calendar__tile--now {
+    background: var(--color-lamaYellow) !important;
+}
+
+.react-calendar__navigation__label__labelText {
+    font-weight: 600;
 }
