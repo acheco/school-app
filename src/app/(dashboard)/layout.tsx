@@ -5,6 +5,7 @@ import Navbar from '@/components/navbar';
 
 type DashboardLayoutProps = {
   children: React.ReactNode;
+  params: { slug: string };
 };
 export default function DashboardLayout({
   children,
@@ -17,7 +18,7 @@ export default function DashboardLayout({
           className="flex items-center justify-center gap-2 lg:justify-start"
         >
           <Image src="/logo.png" alt="The logo image" width={32} height={32} />
-          <span className="hidden md:block">School App</span>
+          <span className="hidden font-bold md:block">School App</span>
         </Link>
         <Menu />
       </div>
